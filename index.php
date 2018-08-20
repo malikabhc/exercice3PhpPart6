@@ -7,8 +7,10 @@
   <body>
     <!-- exo03-6/?startDate=2/05/2016&endDate=27/11/2016 -->
       <?php
-        if (isset($_GET['startDate']) && isset($_GET['endDate'])) {
+        if (!empty($_GET['startDate']) && !empty($_GET['endDate'])) {
           echo $_GET['startDate'] . ' ' . $_GET['endDate'];
+      } else {
+        echo 'Erreur';
       }
       ?>
   </body>
